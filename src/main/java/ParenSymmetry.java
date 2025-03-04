@@ -4,6 +4,28 @@ import java.util.List;
 public class ParenSymmetry {
 
     public Boolean isBalanced(String s) {
+        String g;
+        int x=0, idx = 0;
+
+        while(idx < s.length()){
+            g = String.valueOf(s.charAt(idx));
+            if(g.equals("(")){
+                x++;
+            }else if(g.equals(")")){
+                x--;
+            } else if (x <0) {
+                return false;
+            }
+            idx++;
+        }
+
+        if(x <0){
+            return false;
+        } else if(x >0){
+            return false;
+        } else if(x == 0) {
+            return true;
+        }
         return null;
     }
 
