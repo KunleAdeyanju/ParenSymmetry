@@ -40,7 +40,7 @@ public class ParenSymmetry {
             Scanner s = new Scanner(textFile);
             while (s.hasNextLine()){
                 data = s.nextLine();
-                System.out.println(isBalanced(data));
+                System.out.print(isBalanced(data) + ", ");
 
             }
             s.close();
